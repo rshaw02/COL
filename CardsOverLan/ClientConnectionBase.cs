@@ -1,6 +1,6 @@
-﻿using CardsOverLan.Analytics;
-using CardsOverLan.Game;
-using CardsOverLan.Game.ContractResolvers;
+﻿using CardsAgainstHumanityLibrary;
+using CardsAgainstHumanityLibrary.Analytics;
+using CardsAgainstHumanityLibrary.ContractResolvers;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;

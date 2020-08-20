@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CardsAgainstHumanityLibrary
+namespace CardsAgainstHumanityLibrary.Extensions
 {
-	internal static class Extensions
+	public static class Extensions
 	{
 		public static T Do<T>(this T value, Func<T, T> action) => action(value);
 

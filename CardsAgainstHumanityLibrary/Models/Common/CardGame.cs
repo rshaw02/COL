@@ -7,6 +7,7 @@ using System.Text;
 using System.Security.Cryptography;
 using CardsAgainstHumanityLibrary.Cards;
 using CardsAgainstHumanityLibrary.Trophies;
+using CardsAgainstHumanityLibrary.Extensions;
 
 namespace CardsAgainstHumanityLibrary
 {

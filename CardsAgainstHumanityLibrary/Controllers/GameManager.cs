@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace CardsAgainstHumanityLibrary
 {
-	internal sealed class GameManager
+	public sealed class GameManager
 	{
 		private const string PacksDirectory = "packs";
 		private const string SettingsFilePath = "settings.json";

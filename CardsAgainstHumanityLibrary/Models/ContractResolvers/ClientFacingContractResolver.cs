@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace CardsAgainstHumanityLibrary.ContractResolvers
 {
-	internal sealed class ClientFacingContractResolver : DefaultContractResolver
+	public sealed class ClientFacingContractResolver : DefaultContractResolver
 	{
 		public static ClientFacingContractResolver Instance { get; } = new ClientFacingContractResolver();
 
