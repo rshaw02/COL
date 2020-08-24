@@ -88,8 +88,8 @@ smaller {
     flex-wrap: nowrap;
     justify-content: flex-end;
     align-items: flex-start;
-    color: #111 !important;
-    background: #ddd !important;
+    color: rgb(43, 55, 56)    !important;
+    background: #9e9d9d !important;
     top: 0;
     left: 0;
     right: 0;
@@ -102,9 +102,9 @@ smaller {
 #navbar .lah-btn {
     padding: 12pt 6pt;
     margin: 4pt 0;
-    color: #111;
-    background: #eee;
-    border-color: #111;
+    color: rgb(214, 205, 205);
+    background: rgb(95, 104, 95);
+    border-color: rgb(51, 44, 44);
 }
 
 #navbar .nav-header {
@@ -113,7 +113,7 @@ smaller {
     top: 0;
     right: 16pt;
     margin-top: 12pt;
-    font-size: 150%;
+    font-size: 50px;
     text-align:center;
 }
 
@@ -283,8 +283,8 @@ card > .btn-skip:not(:disabled):hover {
     grid-column: c-center / c-end;
     text-align: center;
     margin: auto auto;
-    font-size: 36pt;
-    line-height: 1.0em;
+    font-size: 30pt;
+    line-height: 1.2em;
 }
 
 /* JUDGE STATUS & MESSAGE AREAS */
@@ -736,10 +736,6 @@ card[white].winner, .card-group.winner card[white] {
     filter: drop-shadow(0 0 4px black);
 }
 
-#hand-cards-area {     
-    
-}
-
 #hand-cards-container {
     padding: 32pt 8pt;
     margin-bottom: 28pt;
@@ -1138,7 +1134,7 @@ card[data-selection]::after {
 
 .lah-btn:not(.disabled):hover {
     border-color: #444;
-    color: #444;
+    color: rgb(202, 38, 38);
     cursor: pointer;
 }
 
@@ -1161,17 +1157,18 @@ card[data-selection]::after {
     height: 16pt;
     min-height: 16pt;
     outline: none;
-    border: 2px solid black;
+    border: 2px solid rgb(51, 71, 45);
     border-radius: 4pt;
     font-size: 14pt;
     padding: 6pt;
+    background-color: rgb(201, 198, 198);
 }
 
 .lah-label {
     display: block;
     font-size: 14pt;
     margin: 4pt 1pt;
-    color: #444;
+    color: rgb(29, 51, 22);
     flex-shrink: 0;
 }
 
@@ -1191,7 +1188,7 @@ card[data-selection]::after {
     display: flex;
     flex-direction: column;
     position: absolute;
-    color: #111;
+    color: rgb(43, 55, 56);
     left: 0;
     top: 0;
     bottom: 0;
@@ -1200,7 +1197,7 @@ card[data-selection]::after {
 }
 
 .modal-dialog {
-    background: #f6f6f6; 
+    background: #9e9d9d; 
     padding: 20pt 16pt;
     flex-grow: 1;
     max-width: 100vw;
@@ -1211,9 +1208,9 @@ card[data-selection]::after {
 .modal-body {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    width: 100%;
-    height: 100%;
+    align-content: center;
+    width: 80%;
+    height: 80%;
 }
 
 .modal-nav {
@@ -1228,9 +1225,9 @@ card[data-selection]::after {
 }
 
 .modal-close {
-    width: 20pt;
+    width: 60pt;
     height: 20pt;
-    font-size: 20pt;
+    font-size: 40pt;
     background: none;
     border: none;
     outline: none;
@@ -1239,7 +1236,7 @@ card[data-selection]::after {
 }
 
 .modal-close:hover {
-    color: #666;
+    color: rgb(209, 32, 32);
 }
 
 .modal-close:active {
@@ -1251,7 +1248,6 @@ card[data-selection]::after {
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    width: 100%;
 }
 
 .lah-vlist > .lah-listitem, .modal-body > .lah-listitem {
@@ -1351,8 +1347,9 @@ card[data-selection]::after {
 #join-stat-grid {
     display: grid;
     grid-template: [r-start] 1fr [r1] 1fr [r-end] / [c-start] 1fr [c1] 1fr [c-end];
+    justify-content: space-around;
     margin: 4px 0;
-    color: #333;
+    color: rgb(31, 31, 48)
 }
 
 #join-stat-grid .server-stat {
@@ -1372,7 +1369,7 @@ card[data-selection]::after {
     display: block;
     font-size: 24pt;
     text-align: center;
-    color: #454545;
+    color: rgb(31, 31, 48);
     font-weight: 700;
 }
 
