@@ -1,6 +1,6 @@
-﻿using CardsOverLan.Analytics;
-using CardsOverLan.Game;
-using CardsOverLan.Game.Converters;
+﻿using CardsAgainstHumanityLibrary.Analytics;
+using CardsAgainstHumanityLibrary;
+using CardsAgainstHumanityLibrary.Converters;
 using CardsOverLan.Web;
 using Nancy.Hosting.Self;
 using Newtonsoft.Json;

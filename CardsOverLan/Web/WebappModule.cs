@@ -1,4 +1,5 @@
-﻿using CardsOverLan.Analytics;
+﻿using CardsAgainstHumanityLibrary;
+using CardsAgainstHumanityLibrary.Analytics;
 using Nancy;
 using Newtonsoft.Json;
 

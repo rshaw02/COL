@@ -1,5 +1,7 @@
-﻿using CardsOverLan.Game;
-using CardsOverLan.Game.Bots;
+﻿using CardsAgainstHumanityLibrary;
+using CardsAgainstHumanityLibrary.Bots;
+using CardsAgainstHumanityLibrary.Cards;
+using CardsAgainstHumanityLibrary.Extensions;
 using Rant;
 using System;
 using System.Collections.Generic;

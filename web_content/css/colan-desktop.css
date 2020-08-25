@@ -4,7 +4,7 @@
 }
 
 ::-webkit-scrollbar-track {
-    background: #bbb;
+    background: rgb(43, 37, 37);
     border-radius: 8px;
 }
 
@@ -53,7 +53,7 @@ body {
 
 small {
     display: inline;
-    font-size: .75em;
+    font-size: .75sem;
 }
 
 smaller {
@@ -74,7 +74,7 @@ smaller {
     left: 0;
     right: 0;
     height: var(--navbar-height);
-    padding: 4pt 4pt;
+    padding: 4pt;
     z-index: 2147483647;
 }
 
@@ -183,10 +183,10 @@ smaller {
 #ready-up-area {
     position: absolute;
     bottom: 0;
-    left: 50%;
+    left: 35%;
     transform: translateX(-50%);
-    min-width: 500px;
-    width: 30%;
+    min-width: 50px;
+    width: 25%;
     min-height: 130px;
     display: grid;
     padding: 16px;
@@ -212,8 +212,7 @@ smaller {
     grid-column: c-start / c-center;
     height: 70px;
     width: 90%;
-    box-sizing: border-box;
-    margin: auto auto;
+    text-align: center;
 }
 
 #ready-up-votes-label {
@@ -285,8 +284,8 @@ smaller {
 }
 
 #player-list-title, #player-chat-title {
-    font-size: 1em;
-    font-weight: 600;
+    font-size: 25px;
+    font-weight: 200;
     margin: 0 3pt 2pt 0;
     text-align: right;
     opacity: .8;
@@ -297,7 +296,7 @@ smaller {
     flex-shrink: 0;
     grid-template-rows: [r-start] 1fr [r-end];
     grid-template-columns: [c-start] 1fr [c-center] 4em [c-end];
-    padding: 3pt 0;
+    padding: 3pt;
     margin-right: 3pt;
 }
 
@@ -428,7 +427,7 @@ smaller {
 }
 
 .chat-msg-author {
-    font-size: 10pt;
+    font-size: 15pt;
     margin: 2px 0;
     font-weight: 700;
 }
@@ -546,12 +545,12 @@ smaller {
     color: var(--accent-fg);
     outline: none;
     border: none;
-    border-bottom: 1px solid #9a9a9a;
+    border-bottom: 1px solid #c9c0c0;
     padding: 4px;
     margin: 0;
-    width: 100%;
-    height: 1.8em;
-    font-weight: 300;
+    width: 90%;
+    height: 1.7em;
+    font-weight: 100;
     box-sizing: border-box;
     transition: border-color .2s ease, border-width .2s ease;
 }
@@ -641,11 +640,11 @@ smaller {
     justify-content: flex-start;
     color: var(--accent-fg);
     left: 16pt;
-    top: 10pt;        
+    top: 20pt;        
     min-width: 64pt;
     z-index: 2147483647;
     cursor: default;
-    opacity: .65;
+    opacity: .90;
     transition: opacity .3s;
 }
 
@@ -658,8 +657,8 @@ smaller {
 }
 
 #status {
-    font-size: 22pt;
-    font-weight: 800;
+    font-size: 26pt;
+    font-weight: 300;
     margin-left: 2px;
 }
 
@@ -668,7 +667,7 @@ smaller {
     display: inline-block;
     width: 1.3em;
     height: 1.3em;
-    margin-right: 8pt;
+    margin-right: 10pt;
     transform: translateY(.25em);
     background-repeat: no-repeat;
     background-size: contain;
@@ -677,7 +676,7 @@ smaller {
 } 
 
 #status-area .stat {
-    font-size: 16pt;
+    font-size: 19pt;
     text-align: left;    
     max-width: 350px;
     margin-bottom: 2px;
@@ -1071,7 +1070,7 @@ card > .btn-skip:not(:disabled):hover {
     grid-column: c-center / c-end;
     justify-content: flex-start;
     align-items: center;
-    color: #888;
+    color: rgb(226, 17, 17);
     pointer-events: none;
 }
 
@@ -1470,20 +1469,23 @@ card[data-selection]::after {
 }
 
 .lah-txtbox {
-    padding: 6pt;
+    flex-shrink: 0;
+    height: 16pt;
+    min-height: 16pt;
     outline: none;
-    border: 2px solid #444;
+    border: 2px solid rgb(51, 71, 45);
     border-radius: 4pt;
     font-size: 14pt;
-    height: 16pt;
-    min-width: 16em;
+    padding: 6pt;
+    background-color: rgb(201, 198, 198)
 }
 
 .lah-label {
     display: block;
     font-size: 13pt;
     margin: 4pt 1pt;
-    color: #444;
+    color: rgb(29, 51, 22);
+    flex-shrink: 0;
 }
 
 input[type=checkbox].lah-checkbox {
@@ -1556,17 +1558,17 @@ input[type=checkbox].lah-checkbox:checked + label:after {
     align-items: center;
     background: rgba(.13, .13, .13, .85);
     z-index: 2147483647;
-    color: black;
-    --accent-fg: #000;
+    color: rgb(43, 55, 56);
+    --accent-fg: rgb(51, 71, 45);
     --accent-bg: #eee;
 }
 
 .modal.opaque {
-    background: #1a1a1a;
+    background: #2c2c36;
 }
 
 .modal-dialog {
-    background: #f6f6f6;  
+    background: #9e9d9d;  
     display: flex;
     flex-direction: column;
     position: relative;  
@@ -1607,9 +1609,9 @@ input[type=checkbox].lah-checkbox:checked + label:after {
 }
 
 .modal-close {
-    width: 20pt;
+    width: 30pt;
     height: 20pt;
-    font-size: 20pt;
+    font-size: 40pt;
     background: none;
     border: none;
     outline: none;
@@ -1618,7 +1620,7 @@ input[type=checkbox].lah-checkbox:checked + label:after {
 }
 
 .modal-close:hover {
-    color: #666;
+    color: rgb(209, 32, 32);
 }
 
 .modal-close:active {
@@ -1643,7 +1645,7 @@ input[type=checkbox].lah-checkbox:checked + label:after {
 }
 
 .lah-vlist > .lah-gap, .modal-body > .lah-gap {
-    margin: 4pt 4pt;
+    margin: 9pt 4pt;
 }
 
 .lah-hlist {
@@ -1699,14 +1701,6 @@ input[type=checkbox].lah-checkbox:checked + label:after {
     }
 }
 
-#join-version {
-    position: absolute;
-    right: 16px;
-    top: 16px;
-    font-size: 10pt;
-    opacity: .5;
-}
-
 #join-screen-title {
     margin: 4px 0;
     text-align: center;
@@ -1721,11 +1715,10 @@ input[type=checkbox].lah-checkbox:checked + label:after {
 
 #join-stat-grid {
     display: flex;
-    /* grid-template: [r-start] 1fr [r-end] / [c-start] 1fr [c1] 1fr [c2] 1fr  [c3] 1fr [c-end]; */
     flex-direction: row;
     justify-content: space-around;
     margin: 4px 0;
-    color: #333;
+    color: rgb(31, 31, 48)
 }
 
 #join-marquee {
@@ -1770,7 +1763,7 @@ input[type=checkbox].lah-checkbox:checked + label:after {
     display: block;
     font-size: 24pt;
     text-align: center;
-    color: #454545;
+    color: rgb(31, 31, 48);
     font-weight: 700;
 }
 

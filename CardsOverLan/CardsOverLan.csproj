@@ -67,49 +67,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Analytics\AnalyticsManager.cs" />
-    <Compile Include="Analytics\CardFrequencyRecord.cs" />
-    <Compile Include="Analytics\StringFrequencyRecord.cs" />
-    <Compile Include="Analytics\WinningPlayRecord.cs" />
-    <Compile Include="ClientIgnoreAttribute.cs" />
-    <Compile Include="Extensions.cs" />
     <Compile Include="ClientConnectionBase.cs" />
-    <Compile Include="GameManager.cs" />
-    <Compile Include="Game\Bots\BotConfiguration.cs" />
-    <Compile Include="Game\Bots\Taunt.cs" />
-    <Compile Include="Game\ClientFacingAttribute.cs" />
-    <Compile Include="Game\ClientObjectPolicyAttribute.cs" />
-    <Compile Include="Game\ClientObjectPolicyType.cs" />
-    <Compile Include="Game\ContractResolvers\ClientFacingContractResolver.cs" />
-    <Compile Include="Game\Converters\EnumNameConverter.cs" />
-    <Compile Include="Game\Converters\TrophyRequirementConverter.cs" />
-    <Compile Include="Game\GameStage.cs" />
-    <Compile Include="Game\BlackCard.cs" />
-    <Compile Include="Game\Card.cs" />
-    <Compile Include="Game\Converters\CardConverter.cs" />
-    <Compile Include="Game\Pack.cs" />
-    <Compile Include="Game\CardGame.cs" />
-    <Compile Include="Game\Player.cs" />
-    <Compile Include="Game\NameAttribute.cs" />
-    <Compile Include="Game\PlayerTokenGenerator.cs" />
-    <Compile Include="Game\StringUtilities.cs" />
-    <Compile Include="Game\Trophies\AllTrophyRequirement.cs" />
-    <Compile Include="Game\Trophies\AnyTrophyRequirement.cs" />
-    <Compile Include="Game\Trophies\CardProportionTrophyRequirement.cs" />
-    <Compile Include="Game\Trophies\CardsPlayedTrophyRequirement.cs" />
-    <Compile Include="Game\Trophies\LostToBotTrophyRequirement.cs" />
-    <Compile Include="Game\Trophies\Trophy.cs" />
-    <Compile Include="Game\Trophies\TrophyRequirement.cs" />
-    <Compile Include="Game\Trophies\WinProportionTrophyRequirement.cs" />
-    <Compile Include="HashList.cs" />
     <Compile Include="PlayerConnection.cs" />
-    <Compile Include="Game\WhiteCard.cs" />
-    <Compile Include="GameSettings.cs" />
-    <Compile Include="LocalizedString.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="CardGameServer.cs" />
-    <Compile Include="Game\RoundPlay.cs" />
     <Compile Include="RejectCodes.cs" />
     <Compile Include="SpectatorConnection.cs" />
     <Compile Include="Tally.cs" />
@@ -129,6 +91,12 @@
     <Content Include="readme.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CardsAgainstHumanityLibrary\CardsAgainstHumanityLibrary.csproj">
+      <Project>{f18ba2bf-f115-49e2-8b02-e4522a6dc6e5}</Project>
+      <Name>CardsAgainstHumanityLibrary</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
