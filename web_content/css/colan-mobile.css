@@ -683,6 +683,12 @@ card[white].winner, .card-group.winner card[white] {
     flex-shrink: 0;
 }
 
+#game-end-scoreboard-save {
+    font-size: 25px;
+    background-color: rgb(201, 198, 198);
+    width: 200px;
+}
+
 /* trophy description */
 .trophy:before {
     content: attr(data-trophy-name) ":\a\a" attr(data-trophy-desc);
