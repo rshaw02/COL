@@ -4,6 +4,7 @@ using CardsAgainstHumanityLibrary.ContractResolvers;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.WebSockets;
@@ -65,13 +66,48 @@ namespace CardsOverLan
 			var xForwardedFor = Context.Headers["X-Forwarded-For"] ?? String.Empty;
 			var forwardedAddresses = xForwardedFor.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries).Select(s => s.Trim()).ToArray();
 			_ip = forwardedAddresses.Length > 0 ? forwardedAddresses[0].ToLowerInvariant() : Context.UserEndPoint.Address.ToString();
-
+			
+			//Read data from blacklist
+			string blacklist = "";
+			string whitelist = "";
+			string pathBlacklist = Directory.GetCurrentDirectory() + "\\blacklist.txt";
+			string pathWhitelist = Directory.GetCurrentDirectory() + "\\whitelist.txt";
+			if (!File.Exists(pathBlacklist))
+			{
+				File.WriteAllText(pathBlacklist, "", Encoding.UTF8);
+			}
+			else
+			{
+				blacklist = File.ReadAllText(pathBlacklist);
+			}
+			if (!File.Exists(pathWhitelist))
+			{
+				File.WriteAllText(pathWhitelist, "", Encoding.UTF8);
+			}
+			else
+			{
+				whitelist = File.ReadAllText(pathWhitelist);
+			}
+			
 			// Kick duplicates
 			if (!Game.Settings.AllowDuplicatePlayers && Server.IsIpConnected(_ip))
 			{
 				Reject("reject_duplicate");
 				return;
 			}
+
+			if(blacklist.Contains(_ip.ToString()))
+            {
+				Reject("reject_blacklist");
+				return;
+			}
+
+			if(whitelist.Length > 0 && !whitelist.Contains(_ip))
+            {
+				Reject("reject_whitelist");
+				return;
+			}
+
 
 			// Verify password
 			if (String.IsNullOrEmpty(Game.Settings.ServerPassword) || GetCookie("game_password") == Game.Settings.ServerPassword)
