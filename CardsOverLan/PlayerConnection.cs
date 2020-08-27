@@ -100,7 +100,12 @@ namespace CardsOverLan
 
 		private void CreatePlayer()
 		{
-			_player = Game.CreatePlayer(GetCookie("name"), false, GetCookie("player_token"));
+			if (Badword.Contains(GetCookie("name"))) 
+			{
+				_player = Game.CreatePlayer("!@#$%^", false, GetCookie("player_token"));
+			}
+			else
+				_player = Game.CreatePlayer(GetCookie("name"), false, GetCookie("player_token"));
 
 			RegisterEvents();
 
@@ -157,7 +162,10 @@ namespace CardsOverLan
 
 		private void OnPlayerNameChanged(Player player, string name)
 		{
+			if (Badword.Contains(name.ToLower()))
+				OnPlayerNameChanged(player, "!@#$%^");
 			SendClientInfoToPlayer();
+
 		}
 
 		private void OnPlayerSelectionChanged(Player player, WhiteCard[] selection)
@@ -333,6 +341,11 @@ namespace CardsOverLan
 			Context.WebSocket.Close();
 		}
 
+		private string[] Badword = new string[]
+		{
+			"fuck", "ass","cunt","bitch","dam","dike","fag","nigg"
+		};
+
 		protected override void OnMessage(MessageEventArgs e)
 		{
 			base.OnMessage(e);
@@ -355,13 +368,18 @@ namespace CardsOverLan
 							case "name":
 							{
 								var strName = key.Value.Value<string>();
-								if (strName != Player.Name)
-								{
-									var oldName = Player.Name;
-									var name = Game.CreatePlayerName(strName, Player);
-									Player.Name = name;
-									Console.WriteLine($"{oldName} changed their name to {name}");
-								}
+                                        if (strName != Player.Name && !Badword.Contains(strName.ToLower()))
+                                        {
+                                            var oldName = Player.Name;
+                                            var name = Game.CreatePlayerName(strName, Player);
+                                            Player.Name = name;
+                                            Console.WriteLine($"{oldName} changed their name to {name}");
+                                        }
+                                        else
+                                        {
+											Console.WriteLine("Username was either the same or contained a profanity!");
+										}
+
 								break;
 							}
 						}

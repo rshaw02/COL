@@ -88,7 +88,7 @@ namespace CardsOverLan
 			{
 				whitelist = File.ReadAllText(pathWhitelist);
 			}
-
+			
 			// Kick duplicates
 			if (!Game.Settings.AllowDuplicatePlayers && Server.IsIpConnected(_ip))
 			{
